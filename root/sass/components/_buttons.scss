@@ -1,0 +1,27 @@
+.btn {
+    border-radius: 30px;
+    box-shadow: 0 5px 7px rgba($color-neutral-2, .1);
+    color: currentColor;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &-primary-1 {
+        @extend .btn;
+
+        background-color: $color-primary;
+        font-size: 1.5rem;
+        padding: 1.2rem 5.5rem;
+    }
+
+    &--s {
+        @extend .btn;
+        
+        font-size: 1.2rem;
+        padding: .8rem 3rem;
+    }
+
+    &--white {
+        background-color: $color-white;
+    }
+}
