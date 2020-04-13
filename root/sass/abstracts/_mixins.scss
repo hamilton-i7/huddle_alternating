@@ -3,9 +3,19 @@
     flex-direction: row;
 }
 
+@mixin rowReverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 @mixin  column {
     display: flex;
     flex-direction: column;
+}
+
+@mixin columnReverse {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 @mixin flexRow($row) {
@@ -14,6 +24,15 @@
     }
     @else {
         @include column();
+    }
+}
+
+@mixin flexRowReverse($rowReverse) {
+    @if $rowReverse {
+        @include rowReverse();
+    }
+    @else {
+        @include columnReverse();
     }
 }
 

@@ -11,16 +11,38 @@
 
     margin-bottom: 6rem;
 
+    @media screen and (min-width: 640px) and (min-height: 360px) {
+        margin-bottom: 2rem;
+    }
+    @media screen and (min-width: 768px) and (min-height: 1024px) {
+        margin-bottom: 6rem;
+    }
+    @media screen and (min-width: 1366px) and (min-height: 768px) {
+        margin-bottom: 4rem;
+    }
+
     &__logo-box {
         width: 32%;
 
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            width: 22%;
+        }
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            width: 16%;
+        }
+        @media screen and (min-width: 1366px) and (min-height: 768px) {
+            width: 14%;
+        }
+
         .main-nav__logo {
+            display: block;
             width: 100%;
         }
     }
 
     &__cta {
         color: $color-neutral-2;
+        height: fit-content;
     }
 }
 
@@ -28,24 +50,85 @@
     @include flexRow(false);
     @include flexContent($align: center);
 
-    &__heading {
-        margin: 3rem 0;
+    @media screen and (min-width: 640px) and (min-height: 360px) {
+        @include flexRow(true);
+        @include flexContent($align: center, $justify: space-between);
+    }
+    @media screen and (min-width: 768px) and (min-height: 1024px) {
+        @include flexRow(false);
+        @include flexContent($align: center);
+    }
+    @media screen and (min-width: 1920px) and (min-height: 1080px) {
+        @include flexRow(true);
+        @include flexContent($align: center, $justify: space-between);
     }
 
-    &__paragraph {
-        margin-bottom: 1.5rem;
-        text-align: center;
-    }
+    &-info {
+        @include flexRow(false);
+        @include flexContent($align: center);
 
-    &__cta {
-        color: $color-neutral-1;
-        margin: 3rem 0;
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            @include flexContent($align: flex-start);
+
+            flex-basis: 45%;
+            margin-right: 2rem;
+        }
+        @media screen and (min-width: 768px) and (min-height: 1024px) {
+            @include flexContent($align: center);
+        }
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            flex-basis: 40%;
+        }
+
+        &__heading {
+            margin: 3rem 0;
+
+            @media screen and (min-width: 640px) and (min-height: 360px) {
+                margin-bottom: 1.5rem;
+                margin-top: 0;
+            }
+        }
+    
+        &__paragraph {
+            margin-bottom: 1.5rem;
+            text-align: center;
+
+            @media screen and (min-width: 640px) and (min-height: 360px) {
+                margin-bottom: 0;
+                text-align: left; 
+            }   
+            @media screen and (min-width: 768px) and (min-height: 1024px) {
+                margin-bottom: 1.5rem;
+                text-align: center;        
+            }
+            @media screen and (min-width: 1920px) and (min-height: 1080px) {
+                margin-bottom: 0;
+                text-align: left;
+            }
+        }
+    
+        &__cta {
+            color: $color-neutral-1;
+            margin: 3rem 0;
+        }
     }
 
     &__img-box {
         margin-top: 3rem;
         width: 90%;
+
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            flex-basis: 50%;
+        }
+        @media screen and (min-width: 768px) and (min-height: 1024px) {
+            width: 80%;
+        }
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            flex-basis: 55%;
+        }
+
         .hero__img {
+            display: block;
             width: 100%;
         }
     }

@@ -8,13 +8,31 @@
 
 html {
     font-size: 62.5%;
+
+    @media screen and (min-width: 1536px) and (min-height: 864px) {
+        font-size: 75%;
+    }
+    @media screen and (min-width: 1920px) and (min-height: 1080px) {
+        font-size: 90%;
+    }
 }
 
 body {
     box-sizing: border-box;
+    position: relative;
     overflow-x: hidden;
 }
 
 .container {
     padding: 8% 5%;
+
+    @media screen and (min-width: 640px) and (min-height: 360px) {
+        padding: 3% 5%;
+    }
+    @media screen and (min-width: 768px) and (min-height: 1024px) {
+        padding: 8% 12%;
+    }
+    @media screen and (min-width: 1920px) and (min-height: 1080px) {
+        padding: 3% 5%;
+    }
 }

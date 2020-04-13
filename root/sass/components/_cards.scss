@@ -5,24 +5,147 @@
     background-color: $color-white;
     border-radius: 15px;
     box-shadow: 0 3px 8px rgba($color-black, .1);
-    margin: 4.5rem 0;
 
-    &__img-box {
-        padding: 4.5rem;
-        width: 100%;
-        .card__img {
+    &-infographic {
+        @extend .card;
+
+        padding: 2rem 0;
+
+        &:nth-of-type(odd) {
+            @media screen and (min-width: 640px) and (min-height: 360px) {
+                @include flexRowReverse(true); 
+            }
+            @media screen and (min-width: 768px) and (min-height: 1024px) {
+                @include flexRow(false);
+            }
+            @media screen and (min-width: 1920px) and (min-height: 1080px) {
+                @include flexRowReverse(true);
+            }
+        }
+
+        &:nth-of-type(even) {
+            @media screen and (min-width: 640px) and (min-height: 360px) {
+                @include flexRow(true); 
+            }
+            @media screen and (min-width: 768px) and (min-height: 1024px) {
+                @include flexRow(false);
+            }
+            @media screen and (min-width: 1920px) and (min-height: 1080px) {
+                @include flexRow(true);
+            }
+        }
+
+        &__img-box {
+            padding: 4.5rem;
             width: 100%;
+
+            @media screen and (min-width: 640px) and (min-height: 360px) {
+                padding: 2rem;
+            }
+            @media screen and (min-width: 768px) and (min-height: 1024px) {
+                padding: 4.5rem;
+                width: 70%;
+            }
+            @media screen and (min-width: 896px) and (min-height: 414px) {
+                flex-basis: 35%;
+            }
+
+            .card__img {
+                width: 100%;
+            }
+        }
+
+        &-info {
+            padding: 0 2.5rem;
+
+            @media screen and (min-width: 896px) and (min-height: 414px) {
+                flex-basis: 60%;
+                padding-left: 5rem
+            }
+            @media screen and (min-width: 1366px) and (min-height: 768px) {
+                flex-basis: 48%;
+                margin: 0 auto;
+            }
+            @media screen and (min-width: 1440px) and (min-height: 900px) {
+                flex-basis: 46%;
+            }
+
+            &__heading {
+                margin: 1.5rem 0;
+
+                @media screen and (min-width: 640px) and (min-height: 360px) {
+                    margin-bottom: 1rem;
+                    margin-top: 0;
+                    padding: 0;
+                }
+            }
+    
+            &__paragraph {
+                color: $color-neutral-3;
+                font-size: 1.5rem;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+                text-align: center;
+
+                @media screen and (min-width: 640px) and (min-height: 360px) {
+                    font-size: 1.2rem;
+                    margin-bottom: 0;
+                    padding: 0;
+                    text-align: left;
+                }
+                @media screen and (min-width: 768px) and (min-height: 1024px) {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                }
+                @media screen and (min-width: 896px) and (min-height: 414px) {
+                    font-size: 1.5rem;
+                }
+                @media screen and (min-width: 1366px) and (min-height: 768px) {
+                    font-size: 1.8rem;
+                }
+                @media screen and (min-width: 1440px) and (min-height: 900px) {
+                    line-height: 1.7;
+                }
+                @media screen and (min-width: 1920px) and (min-height: 1080px) {
+                    margin-bottom: 0;
+                    padding: 0;
+                    text-align: left;
+                }
+            }
         }
     }
 
-    &__heading {
-        margin: 2.5rem 0;
-    }
+    &-cta {
+        @extend .card;
 
-    &__paragraph {
-        font-size: 1.5rem;
-        margin-bottom: 3rem;
-        padding: 0 3rem;
-        text-align: center;
+        left: 50%;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            width: 65%;
+        }
+        @media screen and (min-width: 768px) and (min-height: 1024px) {
+            width: 55%;
+        }
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            width: 55%;
+        }
+        @media screen and (min-width: 1366px) and (min-height: 768px) {
+            width: 42%;
+        }
+
+        &__heading {
+            margin-bottom: 3rem;
+        }
+
+        &__btn {
+            margin-bottom: 1.5rem;
+        }
     }
 }

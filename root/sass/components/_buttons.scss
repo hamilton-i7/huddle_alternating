@@ -1,24 +1,57 @@
 .btn {
     border-radius: 30px;
-    box-shadow: 0 5px 7px rgba($color-neutral-2, .1);
+    box-shadow: 0 5px 7px rgba($color-neutral-2, .15);
     color: currentColor;
     font-weight: 700;
     text-decoration: none;
     text-transform: capitalize;
 
-    &-primary-1 {
+    &-primary {
         @extend .btn;
 
         background-color: $color-primary;
+        color: $color-neutral-1;
+    }
+
+    &-primary--m {
+        @extend .btn-primary;
+
         font-size: 1.5rem;
         padding: 1.2rem 5.5rem;
+
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            font-size: 1rem;
+            padding: 1.2rem 4rem;
+        }
+        @media screen and (min-width: 768px) and (min-height: 1024px), screen and (min-width: 1366px) and (min-height: 768px) {
+            font-size: 1.5rem;
+            padding: 1.2rem 5.5rem;
+        }
+    }
+
+    &-primary--s {
+        @extend .btn-primary;
+
+        font-size: 1.2rem;
+        padding: 1.2rem 4rem;
+
+        @media screen and (min-wdith: 360px) and (min-height: 640px) {
+            font-size: 1rem;
+        }
     }
 
     &--s {
         @extend .btn;
         
         font-size: 1.2rem;
-        padding: .8rem 3rem;
+        padding: .8rem 2.5rem;
+
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            padding: .8rem 3rem;
+        }
+        @media screen and (min-width: 1366px) and (min-height: 768px) {
+            padding: 1rem 4rem;
+        }
     }
 
     &--white {

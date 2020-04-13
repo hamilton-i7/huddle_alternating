@@ -1,0 +1,179 @@
+.footer {
+    background-color: $color-neutral-2;
+    color: $color-neutral-1;
+    font-size: 1.6rem;
+    padding-top: 32%;
+
+    @media screen and (min-width: 640px) and (min-height: 360px) {
+        font-size: 1.2rem;
+        padding-top: 20%;
+    }
+    @media screen and (min-width: 800px) and (min-height: 1280px) {
+        font-size: 1.6rem;
+    }
+    @media screen and (min-width: 896px) and (min-height: 414px) {
+        font-size: 1.4rem;
+        padding-top: 12%;
+    }
+    @media screen and (min-width: 1366px) and (min-height: 768px) {
+        padding-top: 10%;
+    }
+    
+    & > *:not(:last-child) {
+        padding: 0 5%;
+    }
+
+    &__logo-box {
+        margin-bottom: 2.5rem;
+        width: 45%;
+
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            width: 35%;
+        }
+        @media screen and (min-width: 768px) and (min-height: 1024px) {
+            width: 32%;
+        }
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            width: 28%;
+        }
+        @media screen and (min-width: 1366px) and (min-height: 768px) {
+            margin-bottom: 3.5rem;
+            width: 25%;
+        }
+        @media screen and (min-width: 1920px) and (min-height: 1080px) {
+            width: 26%;
+        }
+
+        & .footer__logo {
+            width: 100%;
+        }
+    }
+
+    &-about-us {
+
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            @include flexRow(true);
+            @include flexContent($align: flex-start, $justify: space-between);
+        }
+
+        &__contact {
+            font-style: normal;
+
+            @media screen and (min-width: 640px) and (min-height: 360px) {
+                flex-basis: 38%;
+            }
+    
+            & .contact-info {
+                @include flexRow(true);
+    
+                list-style: none;
+    
+                &:first-child .contact-info__icon {
+                    padding-top: 0.8rem;
+                }
+                &:not(:first-of-type) {
+                    @include flexContent($align: center);
+                }
+                &:not(:last-of-type) {
+                    margin-bottom: 1.5rem;
+                }
+    
+                &__icon {
+                    margin-right: 1rem;
+    
+                    & img {
+                        display: block;    
+                    }
+                }
+    
+                &__text {
+                    line-height: 1.6;
+                }
+            }
+        }
+    
+        &__links {
+            @include flexRow(false);
+
+            list-style: none;
+            margin: 3rem 0;
+
+            @media screen and (min-width: 640px) and (min-height: 360px) {
+                align-content: space-between;
+                flex-basis: 30%;
+                flex-wrap: wrap;
+                height: 12rem;
+                margin: 0;
+            }
+    
+            &-item {
+    
+                &:not(:last-of-type) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    
+        &__social {
+            @include flexRow(true);
+            @include flexContent($justify: space-between);
+    
+            list-style: none;
+            margin: 0 auto;
+            width: fit-content;
+
+            @media screen and (min-width: 640px) and (min-height: 360px) {
+                flex-basis: 15%;
+                margin: 0;
+            }
+            @media screen and (min-width: 1366px) and (min-height: 768px) {
+                flex-basis: 12%;
+            }
+            @media screen and (min-width: 1920px) and (min-height: 1080px) {
+                flex-basis: 10%;
+            }
+    
+            &-item {
+                margin-bottom: 2rem;
+    
+                &:not(:last-of-type) {
+                    margin-right: 2rem;
+                }
+    
+                & a img {
+                    display: block;
+                    width: 100%;
+
+                    @media screen and (min-width: 1366px) and (min-height: 768px) {
+                        width: 120%;
+                    }
+                }
+    
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            margin-top: 6rem;
+            text-align: right;
+        }
+        @media screen and (min-width: 768px) and (min-height: 1024px) {
+            font-size: 1.2rem;
+        }
+    }
+
+    & .attribution {
+        background-color: $color-black;
+        padding: 1.5rem 2rem;
+        text-align: center;
+
+        & a {
+            font-weight: 700;
+        }
+    }
+}

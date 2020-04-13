@@ -3,6 +3,13 @@ body {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 1.8rem;
+
+    @media screen and (min-width: 640px) and (min-height: 360px) {
+        font-size: 1.4rem;
+    }
+    @media screen and (min-width: 768px) and (min-height: 1024px), screen and (min-width: 1366px) and (min-height: 768px) {
+        font-size: 1.8rem;
+    }
 }
 
 .heading {
@@ -13,21 +20,77 @@ body {
         @extend .heading;
 
         font-size: 2.8rem;
+        line-height: 1.5;
+
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            font-size: 2rem;
+            text-align: left;
+        }
+        @media screen and (min-width: 768px) and (min-height: 1024px) {
+            font-size: 2.8rem;
+            text-align: center;
+        }
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            font-size: 2.8rem;
+        }
+        @media screen and (min-width: 1366px) and (min-height: 768px) {
+            font-size: 3.6rem;
+        }
+        @media screen and (min-width: 1440px) and (min-height: 900px) {
+            font-size: 4rem;
+        }     
+        @media screen and (min-width: 1920px) and (min-height: 1080px) {
+            text-align: left;
+        }
     }
 
     &-secondary {
         @extend .heading;
 
         font-size: 2.4rem;
+
+        @media screen and (min-width: 640px) and (min-height: 360px) {
+            font-size: 1.8rem;
+            text-align: left;
+        }
+        @media screen and (min-width: 768px) and (min-height: 1024px) {
+            font-size: 2.4rem;
+            text-align: center;
+        }
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            font-size: 2.4rem;
+        }
+        @media screen and (min-width: 1366px) and (min-height: 768px) {
+            font-size: 2.8rem;
+        }
+        @media screen and (min-width: 1440px) and (min-height: 900px) {
+            font-size: 3rem;
+        }
+        @media screen and (min-width: 1920px) and (min-height: 1080px) {
+            text-align: left;
+        }
+    }
+
+    &-tertiary {
+        @extend .heading;
+
+        font-size: 1.8rem;
+
+        @media only screen and (min-height: 640px) and (min-width: 360px) {
+            font-size: 1.6rem;
+        }
+        @media screen and (min-width: 896px) and (min-height: 414px) {
+            font-size: 1.8rem;
+        }
+        @media screen and (min-width: 1366px) and (min-height: 768px) {
+            font-size: 2.2rem;
+        }
+        @media screen and (min-width: 1440px) and (min-height: 900px) {
+            font-size: 2.6rem;
+        }
     }
 }
 
 .paragraph {
-    line-height: 1.6;
-
-    &--gray {
-        @extend .paragraph;
-
-        color: $color-neutral-3;
-    }
+    line-height: 1.5;
 }
